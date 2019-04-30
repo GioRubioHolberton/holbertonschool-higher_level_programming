@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m buuuuum $PYFILE
+python -m compileall $PYFILE
