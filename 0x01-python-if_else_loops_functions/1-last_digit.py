@@ -10,5 +10,5 @@ if l > 5:
     print("{:s} is {:d} and is greater than 5".format(t, l))
 elif l == 0:
     print("{:s} is {:d} and is 0".format(t, l))
-elif l < 6 and l != 0:
+else:
     print("{:s} is {:d} and is less than 6 and not 0".format(t, l))
