@@ -3,6 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 if number < 0:
     l = (number * -1) % 10
+    l = l * -1
 else:
     l = number % 10
 t = "Last digit of {}".format(number)
