@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Base Class"""
+"""This class will be the base of the project."""
 import json
 
 
 class Base:
+    """ Base Class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Defines public attribute id"""
         if id is not None:
             self.id = id
         else:
