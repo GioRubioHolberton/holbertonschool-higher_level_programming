@@ -4,6 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -13,10 +14,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """This method return width of triangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Width values set"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif (value <= 0):
@@ -26,10 +29,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """This method return height of triangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Height values set"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -73,11 +78,13 @@ class Rectangle(Base):
             print(self.__x * " " + self.__width * "#")
 
     def __str__(self):
+        """Object like a string"""
         return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
                                                        self.__height))
 
     def update(self, *args, **kwargs):
+        """Method that update args"""
         if len(args) and args is not None:
             try:
                 self.id = args[0]
@@ -101,5 +108,6 @@ class Rectangle(Base):
                     self.y == value
 
     def to_dictionary(self):
+        """Method that returns the dictionary of a Rectangle"""
         return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
                 'width': self.width}
