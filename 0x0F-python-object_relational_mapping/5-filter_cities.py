@@ -19,7 +19,7 @@ if __name__ == '__main__':
     city = 0
     for row in rows:
         if city != 0:
-            print(end=", ")
+            print(", "end="")
         print("%s" % row, end="")
         city += 1
     cur.close()
