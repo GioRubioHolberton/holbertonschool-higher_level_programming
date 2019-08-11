@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" script that takes in an argument and displays all values in the states """
+""" script that takes in an argument and displays all values """
+
 if __name__ == '__main__':
     from sys import argv
     import MySQLdb
