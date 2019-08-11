@@ -14,7 +14,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("""SELECT cities.name FROM cities
                 INNER JOIN states ON cities.state_id = states.id
-                WHERE states.name = %s""", (argv[4],))
+                WHERE states.name = %s ORDER BY cities.id""", (argv[4],))
     rows = cur.fetchall()
     city = 0
     for row in rows:
@@ -22,5 +22,7 @@ if __name__ == '__main__':
             print(", ", end="")
         print("%s" % row, end="")
         city += 1
+    print("")
+
     cur.close()
     db.close()
