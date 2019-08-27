@@ -2,6 +2,7 @@
 """script that takes in a URL, sends a request to the URL"""
 import sys
 from urllib import request
+from urllib import error
 
 if __name__ == "__main__":
     url = sys.argv[1]
