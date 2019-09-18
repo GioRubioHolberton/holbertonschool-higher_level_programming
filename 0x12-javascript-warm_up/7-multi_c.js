@@ -7,4 +7,3 @@ if (isNaN(myC)) {
     console.log('C is fun');
   }
 }
-
