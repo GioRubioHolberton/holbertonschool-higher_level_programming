@@ -1,7 +1,13 @@
 #!/usr/bin/node
-const numA = parseInt(process.argv[2]);
-const numB = parseInt(process.argv[3]);
-function add (a, b) {
-  return (a + b);
+const myC = parseInt(process.argv[2]);
+if (isNaN(myC)) {
+  console.log('Missing size');
+} else {
+    for (let i = 0; i < myC; i++) {
+      let myX = '';
+    for (let j = 0; j < myC; j++) {
+      myX = 'X';
+    }
+    console.log('C is fun');
+  }
 }
-console.log(add(numA, numB));
