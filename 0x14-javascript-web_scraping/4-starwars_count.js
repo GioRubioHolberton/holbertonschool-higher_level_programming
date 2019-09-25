@@ -7,7 +7,7 @@ req(url, function (err, resp, body) {
     console.log(err);
   } else {
     let num = 0;
-    const rta = JSON.parse(body).rta;
+    const rta = JSON.parse(body).results;
     for (let i = 0; i < rta.length; i++) {
       if (rta[i].characters.includes('https://swapi.co/api/people/18/')) {
         num++;
